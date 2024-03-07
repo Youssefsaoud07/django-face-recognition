@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Hi, : {{request.user.username}}
+<img src="{{ request.user.profile.photo.url }}" alt="Profile Picture">
+<br><br>
+<a href="{% url 'logout' %}" class="btn btn-danger">logout</a>
+
+{% endblock content %}
